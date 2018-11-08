@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div id = "square" style = "width: 200px; height: 200px; background-color: blue;
+     display: none;"></div>
+    <p>
+      javascript는 브라우저 엔진에 의해 작동됩니다.
+      = 클라이언트 프로그래밍입니다.
+    </p>
+    <h2>
+      javascript는 브라우저가 어떻게 동작할지 정해줍니다.
+    </h2>
+    <button onclick="usage1();" oncontextmenu="usage2(event);">
+      javascript코드는 어디에 써야 하나요?
+    </button><br /><br />
+    <button onclick="changetored();">빨간색으로 바꾸기</button><br /><br />
+    <button onclick="getbigger();">사각형 확대</button><br /><br />
+    <button onclick="toggle();" id ="switch">사각형 만들기</button>
+    <script>
+      var toggle = function(){
+        var square = document.getElementById('square');
+        if(square.style.display === 'none'){
+          document.getElementById('switch').innerHTML = '사각형삭제';
+          square.style.display = "block";
+        }else{
+          document.getElementById('switch').innerHTML = '사각형 만들기';
+          square.style.display = 'none';
+        }
+      }
+      alert('javascript는 파일이 최초 로딩될 때, 실행됩니다.');
+
+      var usage1 = function(){
+        alert('javascript 코드는 script 태그안에 작성함으로 만들 수 있습니다.')
+      }
+
+      var changetored = function(){
+        document.getElementById('square').style.backgroundColor = 'red';
+      }
+
+      var getbigger = function(){
+        document.getElementById('square').style.width = '300px';
+        document.getElementById('square').style.height = '300px';
+      }
+    </script>
+    <script type = "text/javascript" src = "./ex.js"></script>
+  </body>
+</html>
