@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h2>req.params 사용하기 I(get 요청)</h2>
+    <a href = "/get/1">/get/1로 이동하기</a><br />
+    <a href = "/get/2">/get/2로 이동하기</a><br />
+    <a href = "/get/3">/get/3로 이동하기</a><br />
+    <a href = "/get/4">/get/4로 이동하기</a><br />
+    <a href = "/get/5">/get/5로 이동하기</a><br />
+    <p style = "color: red">
+      a href로 이동하는 action은 모두 get 요청
+    </p>
+    <h2>req.body 사용하기 (post 요청)</h2>
+    <form method = "post" action = "/change">
+      어디로 갈까요? <input type = "text" name = "what" required/>
+      <button type = "submit">입력</button>
+    </form>
+  </body>
+</html>
